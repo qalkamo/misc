@@ -1,4 +1,4 @@
-## `__init__.py`のはたらき
+# `__init__.py`のはたらき
 
 `__init__.py`のimportの初期化を行うことができる。
 
@@ -26,3 +26,6 @@ chkprint2()
 import module
 module.chkprint2()
 ```
+
+## `__init__.py`における`__all__`
+`__all__`を定義しておくことで、`import *`をしたときにどのファイルからimportするかを指定することができる。
