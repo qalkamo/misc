@@ -1,0 +1,13 @@
+do{ my $x = {
+       'build_requires' => {
+                             'ExtUtils::CBuilder' => 0
+                           },
+       'conflicts' => {},
+       'recommends' => {},
+       'requires' => {
+                       'Bio::Root::Version' => '1.006009001',
+                       'perl' => '5.008'
+                     },
+       'test_requires' => {}
+     };
+$x; }
