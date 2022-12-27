@@ -1,0 +1,5 @@
+stop stopwatch
+hello world!
+stop
+bus stop
+stop stop stop!
