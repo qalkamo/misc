@@ -8,3 +8,5 @@
 ```bash
 python count_words.py
 ```
+
+ファイル名と探している単語が聞かれるので、適宜入力する

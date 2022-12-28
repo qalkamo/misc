@@ -28,7 +28,16 @@ def list_all_line_with_word(file: str, word: str) -> list:
     return new_matrix
 
 
+def count_line_with_words(file: str, word: str) -> int:
+    return len(list_all_line_with_word(file, word))
+
+
 if __name__ == "__main__":
-    print(get_list_of_text("test.txt"))
-    print(count_words("test.txt", "stop"))
-    print(list_all_line_with_word("test.txt", "stop"))
+    print("Enter file name")
+    file = str(input())
+    print("word you are looking for")
+    word = str(input())
+    print(get_list_of_text(file))
+    print(count_words(file, word))
+    print(list_all_line_with_word(file, word))
+    print(count_line_with_words(file, word))
