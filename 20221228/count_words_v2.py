@@ -18,12 +18,13 @@ def get_wordlist(is_newline: bool = False) -> List[str]:
     with open("word_list.txt") as f:
         wordlist = f.readlines()
         if is_newline:
-            for i,l in enumerate(wordlist):
+            for i, l in enumerate(wordlist):
                 wordlist[i] = wordlist[i].strip()
         else:
             wordlist = wordlist[0].split(" ")
             wordlist[-1] = wordlist[-1].strip()
     return wordlist
+
 
 def get_nowtime() -> str:
     now_time = str(datetime.datetime.now()).split(".")[0]
@@ -63,5 +64,7 @@ if __name__ == "__main__":
     output_file = str(input())
     # print("list of words you are looking for:")
     # word_list = list(map(str, input().split()))
-    print(text_all_line_with_word(input_file, output_file, word_list=get_wordlist(True)))
+    print(
+        text_all_line_with_word(input_file, output_file, word_list=get_wordlist(True))
+    )
     # print(text_all_line_with_word(input_file, output_file, word_list=get_wordlist(False)))
