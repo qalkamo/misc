@@ -7,9 +7,10 @@ input file name:
 test2.txt
 output file name:
 test2output.txt
-list of words you are looking for:
-stop hello world
 ```
+
+また検索単語は、word_listに入れておく
+* get_wordlistのis_newlineは、word_list.txtで各単語の列挙の際に改行を行ったかどうかを表す。
 
 実行時間が名称のディレクトリにファイルが作成され、単語が含まれる行がいくつかあるかをリストとして出力する。
 作成されたファイルには出力されるべき行と行数が書かれている

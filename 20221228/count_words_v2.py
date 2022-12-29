@@ -3,6 +3,28 @@ import os
 from typing import List, Union
 
 
+def get_wordlist(is_newline: bool = False) -> List[str]:
+    """
+    is_newline == False
+        word_list.txt
+            "word1 word2 ..."
+    is_newline == True
+        word_list.txt
+            "word1
+            word2
+            ...
+            "
+    """
+    with open("word_list.txt") as f:
+        wordlist = f.readlines()
+        if is_newline:
+            for i,l in enumerate(wordlist):
+                wordlist[i] = wordlist[i].strip()
+        else:
+            wordlist = wordlist[0].split(" ")
+            wordlist[-1] = wordlist[-1].strip()
+    return wordlist
+
 def get_nowtime() -> str:
     now_time = str(datetime.datetime.now()).split(".")[0]
     now_time = now_time.replace(" ", "_")
@@ -39,6 +61,7 @@ if __name__ == "__main__":
     input_file = str(input())
     print("output file name:")
     output_file = str(input())
-    print("list of words you are looking for:")
-    word_list = list(map(str, input().split()))
-    print(text_all_line_with_word(input_file, output_file, word_list))
+    # print("list of words you are looking for:")
+    # word_list = list(map(str, input().split()))
+    print(text_all_line_with_word(input_file, output_file, word_list=get_wordlist(True)))
+    # print(text_all_line_with_word(input_file, output_file, word_list=get_wordlist(False)))
