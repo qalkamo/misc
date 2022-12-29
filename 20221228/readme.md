@@ -11,7 +11,12 @@ list of words you are looking for:
 stop hello world
 ```
 
-実行時間がファイル名のファイルが作成され、
+実行時間が名称のディレクトリにファイルが作成され、単語が含まれる行がいくつかあるかをリストとして出力する。
+```
+stop: 4
+hello: 1
+world: 0
+```
 
 ## 12/28
 * txt fileに所定の単語が何個入っているかを数える関数
