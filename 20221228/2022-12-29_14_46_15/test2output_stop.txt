@@ -1,0 +1,4 @@
+['stop', 'stopwatch']
+['stop']
+['bus', 'stop']
+['stop', 'stop', 'stop!']
