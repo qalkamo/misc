@@ -1,4 +1,5 @@
-from typing import Union, List
+from typing import List, Union
+
 
 def get_list_of_text(file: str) -> list:
     with open(file) as f:
@@ -35,9 +36,9 @@ def count_line_with_words(file: str, word: str) -> int:
 
 
 def text_all_line_with_word(
-        input_file: str,
-        output_file,
-        word_list: Union[str, List[str]],
+    input_file: str,
+    output_file,
+    word_list: Union[str, List[str]],
 ) -> None:
     if isinstance(word_list, str):
         word_list = [word_list]
@@ -50,15 +51,13 @@ def text_all_line_with_word(
     return
 
 
-
-
 if __name__ == "__main__":
-    '''print("Enter file name")
+    """print("Enter file name")
     file = str(input())
     print("word you are looking for")
     word = str(input())
     print(get_list_of_text(file))
     print(count_words(file, word))
     print(list_all_line_with_word(file, word))
-    print(count_line_with_words(file, word))'''
-    text_all_line_with_word("test2.txt", "newmatrix.txt","stop")
+    print(count_line_with_words(file, word))"""
+    text_all_line_with_word("test2.txt", "newmatrix.txt", "stop")

@@ -1,6 +1,6 @@
-from typing import Union, List
 import datetime
 import os
+from typing import List, Union
 
 
 def get_nowtime() -> str:
@@ -11,9 +11,11 @@ def get_nowtime() -> str:
 
 
 def text_all_line_with_word(
-        input_file: str,
-        output_file,
-        word_list: Union[str, List[str]],
+    input_file: str,
+    output_file,
+    word_list: Union[str, List[str]],
+    start_line,
+    end_line,
 ) -> List[int]:
     if isinstance(word_list, str):
         word_list = [word_list]
@@ -23,7 +25,7 @@ def text_all_line_with_word(
     for i, word in enumerate(word_list):
         with open(input_file) as f:
             text_list = f.readlines()
-            for _ in  range(len(text_list)):
+            for _ in range(len(text_list)):
                 text_list_line = text_list[_].split(" ")
                 text_list_line[-1] = text_list_line[-1].strip()
                 if word in text_list_line:
@@ -34,12 +36,11 @@ def text_all_line_with_word(
     return cnt_list
 
 
-
 if __name__ == "__main__":
     print("input file name:")
     input_file = str(input())
     print("output file name:")
     output_file = str(input())
     print("list of words you are looking for:")
-    word_list = list(map(str,input().split()))
+    word_list = list(map(str, input().split()))
     print(text_all_line_with_word(input_file, output_file, word_list))
