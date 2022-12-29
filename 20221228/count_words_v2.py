@@ -14,8 +14,6 @@ def text_all_line_with_word(
     input_file: str,
     output_file,
     word_list: Union[str, List[str]],
-    start_line,
-    end_line,
 ) -> List[int]:
     if isinstance(word_list, str):
         word_list = [word_list]
@@ -32,7 +30,7 @@ def text_all_line_with_word(
                     cnt_list[i] += 1
                     file_name, extension = output_file.split(".")
                     with open(f"{now_time}/{file_name}_{word}.{extension}", "a") as of:
-                        of.writelines(f"{text_list_line}\n")
+                        of.writelines(f"{_} {text_list_line}\n")
     return cnt_list
 
 
