@@ -1,2 +1,0 @@
-9 [0] ['stop', 'stopwatch']
-10 [0, 1] ['stop', 'stop', 'stop!']
