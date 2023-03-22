@@ -1,4 +1,4 @@
-def getlines(file):
+def getlines(file: str) -> list:
     with open(file=file) as f:
         line_list = f.readlines()
         data = []
